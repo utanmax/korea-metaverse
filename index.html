@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Metaverse - Digital Transformation Hub</title>
+    <meta name="description" content="Strategic positioning in South Korea's digital transformation landscape. K-entertainment, Samsung partnerships, and government technology initiatives.">
+    <meta property="og:title" content="Korea Metaverse - Digital Transformation Hub">
+    <meta property="og:description" content="South Korea's digital transformation and K-entertainment ecosystem">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0D1117/00D9FF?text=KOREA+METAVERSE">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo-mdh.ico">
+    <link rel="icon" type="image/png" sizes="512x512" href="logo-mdh.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0D1117;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Skip to main content per accessibilità */
+        .skip-to-main {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #00D9FF;
+            color: #0D1117;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+        
+        .skip-to-main:focus {
+            top: 6px;
+        }
+        
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #0D1117 100%);
+            z-index: -2;
+        }
+        
+        /* Grid pattern overlay */
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            animation: grid-move 20s linear infinite;
+        }
+        
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Riduci motion per utenti con preferenze di accessibilità */
+        @media (prefers-reduced-motion: reduce) {
+            .grid-overlay {
+                animation: none;
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            color: #8B949E;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 300px);
+            text-align: center;
+            padding: 40px 0;
+            outline: none;
+        }
+        
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #8B949E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            color: #8B949E;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.4;
+        }
+        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #00D9FF;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+        
+        .cta {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #00D9FF;
+        }
+        
+        .cta p {
+            color: #8B949E;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .btn-contact {
+            display: inline-block;
+            color: #ffffff;
+            background: linear-gradient(135deg, #00D9FF 0%, #0099CC 100%);
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-contact:hover,
+        .btn-contact:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+            background: linear-gradient(135deg, #00E5FF 0%, #00AADD 100%);
+            outline: 2px solid #00D9FF;
+            outline-offset: 2px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #8B949E;
+            font-size: 0.9em;
+        }
+        
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 15px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-logo:hover {
+            opacity: 1;
+        }
+        
+        .company {
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .logo {
+                font-size: 1.8em;
+            }
+            
+            .btn-contact {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+        }
+        
+        /* Glow effect on hover */
+        .glow-on-hover {
+            position: relative;
+            z-index: 0;
+        }
+        
+        .glow-on-hover:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00D9FF, #0099CC, #00D9FF);
+            z-index: -1;
+            opacity: 0;
+            filter: blur(20px);
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 8px;
+        }
+        
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+        
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    
+    <div class="bg-gradient"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    
+    <div class="container">
+        <header role="banner">
+            <div class="logo">Korea Metaverse</div>
+            <p class="tagline">Digital Transformation Hub</p>
+        </header>
+        
+        <main id="main-content" tabindex="-1">
+            <h1>K-Culture Digital Innovation</h1>
+            <p class="subtitle">
+                Strategic positioning in South Korea's digital transformation landscape, K-entertainment ecosystem, technology partnerships, and government innovation initiatives
+            </p>
+            
+            <div class="status" role="status" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Innovation Development Phase</span>
+            </div>
+            
+            <div class="cta">
+                <h2>Strategic Partnership Inquiries</h2>
+                <p>
+                    For entertainment companies, technology conglomerates, government agencies, and cultural institutions interested in South Korea's digital transformation and K-entertainment global expansion.
+                </p>
+                <a href="https://mdh-digital.net" class="btn-contact glow-on-hover" target="_blank" rel="noopener noreferrer">
+                    Explore Partnerships
+                </a>
+            </div>
+        </main>
+        
+        <footer role="contentinfo">
+            <img src="logo-mdh.svg" alt="MDH Digital" class="footer-logo">
+            <p>&copy; 2025 MDH Digital Initiative. All rights reserved.</p>
+            <p class="company">A Digital Nation Holdings Initiative</p>
+        </footer>
+    </div>
+</body>
+</html>
